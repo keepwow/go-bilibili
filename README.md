@@ -23,14 +23,30 @@ mv go-bilibili /usr/local/bin   # move the output to any path in the PATH, usual
 
 To use Go-Bilibili, follow these steps:
 
-```
+```bash
 Usage: go-bilibili -convert=yes [-inputDir=/path/to/input] [-outputDir=/path/to/output] [--dry-run]"
 ```
 
 Or you can just run from the source code:
 
-```
+```bash
 go run go-bilibili.go -convert=yes [-inputDir=/path/to/input] [-outputDir=/path/to/output] [--dry-run]"
+```
+
+### Examples
+
+```bash
+% go-bilibili
+Usage: go run main.go -convert=yes [-inputDir=/path/to/input] [-outputDir=/path/to/output] [--dry-run]
+
+% go-bilibili -convert=yes -outputDir="$HOME/Videos"
+Do you want to keep the original directories? (yes/no): yes
+Successfully created output file: /Users/keepwow/Videos/【全英】你还在边听听力边看文本？！/【全英】你还在边听听力边看文本？！.mp4
+
+% go-bilibili -convert=yes -outputDir="$HOME/Videos"
+Do you want to keep the original directories? (yes/no): no
+Output file already exists. Do you want to keep the original files? (yes/no): no
+Removing original files...
 ```
 
 ## Contributing to Go-Bilibili
